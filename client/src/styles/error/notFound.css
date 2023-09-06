@@ -1,0 +1,26 @@
+/* NotFound.css */
+
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.not-found-content {
+  text-align: center;
+}
+
+.not-found-heading {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 0;
+}
+
+.not-found-text {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
