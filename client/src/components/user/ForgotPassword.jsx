@@ -42,40 +42,32 @@ const ForgotPassword = () => {
 
   return (
     <>
-      {!loading ? (
-        <LoadingScreen />
-      ) : (
-        <>
-          <MetaData title="Forgot Password" />
-          <div className="forgotPasswordContainer">
-            <div className="forgotPasswordBox">
-              <h2 className="forgotPasswordHeading">Forgot Password</h2>
+      <>
+        <MetaData title="Forgot Password" />
+        <div className="forgotPasswordContainer">
+          <div className="forgotPasswordBox">
+            <h2 className="forgotPasswordHeading">Forgot Password</h2>
 
-              <form
-                className="forgotPasswordForm"
-                onSubmit={forgotPasswordSubmit}
-              >
-                <div className="forgotPasswordEmail">
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-
+            <form
+              className="forgotPasswordForm"
+              onSubmit={forgotPasswordSubmit}
+            >
+              <div className="forgotPasswordEmail">
                 <input
-                  type="submit"
-                  value="Send"
-                  className="forgotPasswordBtn"
+                  type="email"
+                  placeholder="Email"
+                  required
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
-              </form>
-            </div>
+              </div>
+
+              <input type="submit" value="Send" className="forgotPasswordBtn" />
+            </form>
           </div>
-        </>
-      )}
+        </div>
+      </>
     </>
   );
 };

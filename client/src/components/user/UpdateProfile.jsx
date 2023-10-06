@@ -129,70 +129,66 @@ const UpdateProfile = () => {
   }, [dispatch, error, alert, navigate, isUpdated]);
   return (
     <>
-      {loading ? (
-        <LoadingScreen />
-      ) : (
-        <>
-          <MetaData title="Update Profile" />
-          <div className="updateProfileContainer">
-            <div className="updateProfileBox">
-              <h2 className="updateProfileHeading">Update Profile</h2>
+      <>
+        <MetaData title="Update Profile" />
+        <div className="updateProfileContainer">
+          <div className="updateProfileBox">
+            <h2 className="updateProfileHeading">Update Profile</h2>
 
-              <form
-                className="updateProfileForm"
-                encType="multipart/form-data"
-                onSubmit={updateProfileSubmit}
-              >
-                <div className="updateProfileName">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    required
-                    name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </div>
-                <div className="updateProfileName">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    required
-                    name="fullName"
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                  />
-                </div>
-                <div className="updateProfileEmail">
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-
-                <div id="updateProfileImage">
-                  <img src={avatarPreview} alt="Avatar Preview" />
-                  <input
-                    type="file"
-                    name="avatar"
-                    accept="image/*"
-                    onChange={updateProfileDataChange}
-                  />
-                </div>
+            <form
+              className="updateProfileForm"
+              encType="multipart/form-data"
+              onSubmit={updateProfileSubmit}
+            >
+              <div className="updateProfileName">
                 <input
-                  type="submit"
-                  value="Update"
-                  className="updateProfileBtn"
+                  type="text"
+                  placeholder="Name"
+                  required
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
-              </form>
-            </div>
+              </div>
+              <div className="updateProfileName">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                  name="fullName"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                />
+              </div>
+              <div className="updateProfileEmail">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  required
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+
+              <div id="updateProfileImage">
+                <img src={avatarPreview} alt="Avatar Preview" />
+                <input
+                  type="file"
+                  name="avatar"
+                  accept="image/*"
+                  onChange={updateProfileDataChange}
+                />
+              </div>
+              <input
+                type="submit"
+                value="Update"
+                className="updateProfileBtn"
+              />
+            </form>
           </div>
-        </>
-      )}
+        </div>
+      </>
     </>
   );
 };

@@ -67,61 +67,57 @@ const UpdatePassword = () => {
 
   return (
     <>
-      {loading ? (
-        <LoadingScreen />
-      ) : (
-        <>
-          <MetaData title="Change Password" />
-          <div className="updatePasswordContainer">
-            <div className="updatePasswordBox">
-              <h2 className="updatePasswordHeading">Update Profile</h2>
+      <>
+        <MetaData title="Change Password" />
+        <div className="updatePasswordContainer">
+          <div className="updatePasswordBox">
+            <h2 className="updatePasswordHeading">Update Profile</h2>
 
-              <form
-                className="updatePasswordForm"
-                onSubmit={updatePasswordSubmit}
-              >
-                <div className="loginPassword">
-                  <input
-                    type="password"
-                    placeholder="Old Password"
-                    required
-                    value={oldPassword}
-                    onChange={(e) => setOldPassword(e.target.value)}
-                  />
-                </div>
-
-                <div className="loginPassword">
-                  <input
-                    type="password"
-                    placeholder="New Password"
-                    required
-                    minLength="8"
-                    maxLength="20"
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
-                  />
-                </div>
-                <div className="loginPassword">
-                  <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    required
-                    minLength="8"
-                    maxLength="20"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                  />
-                </div>
+            <form
+              className="updatePasswordForm"
+              onSubmit={updatePasswordSubmit}
+            >
+              <div className="loginPassword">
                 <input
-                  type="submit"
-                  value="Change"
-                  className="updatePasswordBtn"
+                  type="password"
+                  placeholder="Old Password"
+                  required
+                  value={oldPassword}
+                  onChange={(e) => setOldPassword(e.target.value)}
                 />
-              </form>
-            </div>
+              </div>
+
+              <div className="loginPassword">
+                <input
+                  type="password"
+                  placeholder="New Password"
+                  required
+                  minLength="8"
+                  maxLength="20"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                />
+              </div>
+              <div className="loginPassword">
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                  minLength="8"
+                  maxLength="20"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+              </div>
+              <input
+                type="submit"
+                value="Change"
+                className="updatePasswordBtn"
+              />
+            </form>
           </div>
-        </>
-      )}
+        </div>
+      </>
     </>
   );
 };
